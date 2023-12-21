@@ -59,6 +59,9 @@ public class hareket : MonoBehaviour
         {
             rb.gravityScale = 1;
         }
+
+
+       
     }
     private void FixedUpdate()
     {
@@ -71,7 +74,8 @@ public class hareket : MonoBehaviour
     private void Jump()
     {
         ar.SetTrigger("jump");
-        rb.AddForce(Vector3.up * jumpforce, ForceMode2D.Impulse);
+        //rb.AddForce(Vector3.up * jumpforce, ForceMode2D.Impulse);
+        rb.velocity = new Vector2(rb.velocity.x,jumpforce);
         extrajump--;
     }
     
@@ -85,4 +89,6 @@ public class hareket : MonoBehaviour
         RaycastHit2D raycashit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0,new Vector2(transform.localScale.x,0), 0.1f, Walllayer);
         return raycashit.collider != null;
     }
+
+    
 }
