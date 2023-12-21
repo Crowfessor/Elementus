@@ -53,11 +53,13 @@ public class hareket : MonoBehaviour
         if(OnWall() && !IsGrounded())
         {
             rb.gravityScale = 0;
-            rb.velocity = Vector3.zero; 
+            rb.velocity = Vector3.zero;
+            ar.SetBool("iswall",true);
         }
         else
         {
             rb.gravityScale = 1;
+            ar.SetBool("iswall", false);
         }
 
 
