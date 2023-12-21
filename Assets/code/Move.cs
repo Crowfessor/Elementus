@@ -30,7 +30,7 @@ public class hareket : MonoBehaviour
     void Update()
     {
 
-        if (ÝsGrounded())
+        if (IsGrounded())
         {
             extrajump = extrajumpValue;
         }
@@ -46,11 +46,11 @@ public class hareket : MonoBehaviour
         else if (horizontal < 0) {
             transform.localScale = new Vector3(-6,6,6);
         }
-        ar.SetBool("Grounded", ÝsGrounded());
+        ar.SetBool("Grounded", IsGrounded());
         
 
 
-        if(OnWall() && !ÝsGrounded())
+        if(OnWall() && !IsGrounded())
         {
             rb.gravityScale = 0;
             rb.velocity = Vector3.zero; 
@@ -75,7 +75,7 @@ public class hareket : MonoBehaviour
         extrajump--;
     }
     
-    private bool ÝsGrounded()
+    private bool IsGrounded()
     {
         RaycastHit2D raycashit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0, Vector2.down, 0.1f,IsGround);
         return raycashit.collider != null;
