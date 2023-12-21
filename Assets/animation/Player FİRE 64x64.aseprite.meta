@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 09f6398e6cb0f7a43947397a993e8037
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: "Player F\u0130RE 64x64_Frame_0"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 4
+      width: 17
+      height: 32
+    spriteID: 5bd8e5ff0f97f78448b5978cc20dd9b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 4}
+  - name: "Player F\u0130RE 64x64_Frame_1"
+    originalName: 
+    pivot: {x: 0.75, y: -0.53333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 20
+      height: 30
+    spriteID: 416f1473f25a4f6418dbb77f667922d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: "Player F\u0130RE 64x64_Frame_2"
+    originalName: 
+    pivot: {x: 0.75, y: -0.53333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 42
+      width: 20
+      height: 30
+    spriteID: 5c7169753ffcb52458cc8f4afa98b774
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 42}
+  - name: "Player F\u0130RE 64x64_Frame_3"
+    originalName: 
+    pivot: {x: 0.7368421, y: -0.516129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 19
+      height: 31
+    spriteID: 945afff307e8bdd4caba0120d763e815
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: "Player F\u0130RE 64x64_Frame_4"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 44
+      width: 17
+      height: 32
+    spriteID: 9dae1ac9108d657498b781c4bddefa07
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 44}
+  - name: "Player F\u0130RE 64x64_Frame_5"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 84
+      width: 17
+      height: 32
+    spriteID: e3f549f076e8f024cb27f1d02a9f980b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 84}
+  - name: "Player F\u0130RE 64x64_Frame_6"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 4
+      width: 17
+      height: 32
+    spriteID: 9fda81d0ca011964a8529925661663e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 4}
+  - name: "Player F\u0130RE 64x64_Frame_7"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 44
+      width: 17
+      height: 32
+    spriteID: be11fb9c8d3718041805ea50a58321fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 44}
+  - name: "Player F\u0130RE 64x64_Frame_8"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 84
+      width: 17
+      height: 32
+    spriteID: c4f8bc1a8fb916e4da72b19514e0c54e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 84}
+  - name: "Player F\u0130RE 64x64_Frame_9"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 4
+      width: 17
+      height: 32
+    spriteID: f4921ea9753582b46bd0960324486dde
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 4}
+  - name: "Player F\u0130RE 64x64_Frame_10"
+    originalName: 
+    pivot: {x: 0.7058824, y: -0.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 44
+      width: 17
+      height: 32
+    spriteID: 26e248c52dbe9404aa885c74fcd46d64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 44}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1111951654
+    name: "Player F\u0130RE 64x64"
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: "Player F\u0130RE 64x64_Frame_0"
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: 5bd8e5ff0f97f78448b5978cc20dd9b4
+    - name: "Player F\u0130RE 64x64_Frame_1"
+      frameIndex: 1
+      cellRect:
+        x: 17
+        y: 16
+        width: 20
+        height: 30
+      spriteId: 416f1473f25a4f6418dbb77f667922d4
+    - name: "Player F\u0130RE 64x64_Frame_2"
+      frameIndex: 2
+      cellRect:
+        x: 17
+        y: 16
+        width: 20
+        height: 30
+      spriteId: 5c7169753ffcb52458cc8f4afa98b774
+    - name: "Player F\u0130RE 64x64_Frame_3"
+      frameIndex: 3
+      cellRect:
+        x: 18
+        y: 16
+        width: 19
+        height: 31
+      spriteId: 945afff307e8bdd4caba0120d763e815
+    - name: "Player F\u0130RE 64x64_Frame_4"
+      frameIndex: 4
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: 9dae1ac9108d657498b781c4bddefa07
+    - name: "Player F\u0130RE 64x64_Frame_5"
+      frameIndex: 5
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: e3f549f076e8f024cb27f1d02a9f980b
+    - name: "Player F\u0130RE 64x64_Frame_6"
+      frameIndex: 6
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: 9fda81d0ca011964a8529925661663e7
+    - name: "Player F\u0130RE 64x64_Frame_7"
+      frameIndex: 7
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: be11fb9c8d3718041805ea50a58321fb
+    - name: "Player F\u0130RE 64x64_Frame_8"
+      frameIndex: 8
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: c4f8bc1a8fb916e4da72b19514e0c54e
+    - name: "Player F\u0130RE 64x64_Frame_9"
+      frameIndex: 9
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: f4921ea9753582b46bd0960324486dde
+    - name: "Player F\u0130RE 64x64_Frame_10"
+      frameIndex: 10
+      cellRect:
+        x: 20
+        y: 16
+        width: 17
+        height: 32
+      spriteId: 26e248c52dbe9404aa885c74fcd46d64
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
