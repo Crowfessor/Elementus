@@ -40,16 +40,20 @@ public class SPELL : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             ar.SetTrigger("FireAttack");
-           GameObject fire =  Instantiate(Fireball, rangeattack.position, Fireball.transform.rotation);
-           Vector3 origscale = fire.transform.localScale;
-
-            fire.transform.localScale = new Vector3 (
-                origscale.x * transform.localScale.x > 0 ? 10 : -10,
-                origscale.y,
-                origscale.z
-                );
+        
         }
 
 
+    }
+    public void FireAttack()
+    {
+        GameObject fire = Instantiate(Fireball, rangeattack.position, Fireball.transform.rotation);
+        Vector3 origscale = fire.transform.localScale;
+
+        fire.transform.localScale = new Vector3(
+            origscale.x * transform.localScale.x > 0 ? 10 : -10,
+            origscale.y,
+            origscale.z
+            );
     }
 }
