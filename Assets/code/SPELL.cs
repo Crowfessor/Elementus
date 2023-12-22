@@ -6,10 +6,11 @@ public class SPELL : MonoBehaviour
 {
     public GameObject Fireball;
     public Transform rangeattack;
+    Animator ar;
     public int CurrentPower = 0;
     void Start()
     {
-        
+        ar = GetComponent<Animator>();  
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class SPELL : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            ar.SetTrigger("FireAttack");
            GameObject fire =  Instantiate(Fireball, rangeattack.position, Fireball.transform.rotation);
            Vector3 origscale = fire.transform.localScale;
 
