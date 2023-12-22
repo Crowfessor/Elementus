@@ -14,6 +14,7 @@ public class hareket : MonoBehaviour
     public float checkRadius = 0.27f;
     public float extrajump;
     public float extrajumpValue = 1;
+    public float wallslidespeed;
     Animator ar;
     BoxCollider2D bc;
     void Start()
@@ -50,16 +51,16 @@ public class hareket : MonoBehaviour
         
 
 
-        if(OnWall() && !IsGrounded())
+        if(OnWall() && !IsGrounded() && Input.GetKeyDown(KeyCode.LeftShift))
         {
             rb.gravityScale = 0;
             rb.velocity = Vector3.zero;
-            ar.SetBool("iswall",true);
+            
         }
         else
         {
-            rb.gravityScale = 1;
-            ar.SetBool("iswall", false);
+            rb.gravityScale = 2;
+            
         }
 
 
@@ -68,10 +69,28 @@ public class hareket : MonoBehaviour
     private void FixedUpdate()
     {
 
+        move();
+
+        
+    }
+
+    private void move()
+    {
         horizontal = Input.GetAxis("Horizontal");
         rb.velocity = new Vector3(horizontal * Time.deltaTime * speed, rb.velocity.y, 0);
-        ar.SetBool("run",horizontal != 0);
-        
+        ar.SetBool("run", horizontal != 0);
+        if(OnWall() && !IsGrounded())
+        {
+            if (rb.velocity.y < -wallslidespeed)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -wallslidespeed);
+                ar.SetBool("iswall", true);
+            }
+        }
+        else
+        {
+            ar.SetBool("iswall", false);
+        }
     }
     private void Jump()
     {
