@@ -6,23 +6,37 @@ using UnityEngine;
 public class hareket : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator ar;
+    BoxCollider2D bc;
+
+    public LayerMask IsGround;
+    public LayerMask Walllayer;
+
+    private int PDirection = 1;
+
     public float horizontal;
     public float speed = 500;
     public float jumpforce = 5;
-    public LayerMask IsGround;
-    public LayerMask Walllayer;
     public float checkRadius = 0.27f;
     public float extrajump;
     public float extrajumpValue = 1;
     public float wallslidespeed;
-    Animator ar;
-    BoxCollider2D bc;
+    public float jumpheight;
+    public float ForceInAir;
+    public float airDragMultiplier;
+    public float wallHopForce;
+    public float wallJumpForce;
+
+    public Vector2 wallHopDirection;
+    public Vector2 wallJumpDirection;
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ar = GetComponent<Animator>();
         bc = GetComponent<BoxCollider2D>();
-        
+        wallHopDirection.Normalize();
+        wallJumpDirection.Normalize();
         
         
     }
@@ -31,56 +45,58 @@ public class hareket : MonoBehaviour
     void Update()
     {
 
-        if (IsGrounded())
-        {
-            extrajump = extrajumpValue;
-        }
-        if(Input.GetKeyDown(KeyCode.Space) && extrajump > 0)
-        {
-            Jump();
-
-        }
-        if (horizontal > 0.01f)
-        {
-            transform.localScale = new Vector3(6, 6, 6);
-        }
-        else if (horizontal < 0) {
-            transform.localScale = new Vector3(-6,6,6);
-        }
-        ar.SetBool("Grounded", IsGrounded());
-        
-
-
-        if(OnWall() && !IsGrounded() && Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            rb.gravityScale = 0;
-            rb.velocity = Vector3.zero;
-            
-        }
-        else
-        {
-            rb.gravityScale = 2;
-            
-        }
-
-
+      
+        Jump();
+        Flip();
        
+
+    
+        ar.SetBool("Grounded", IsGrounded());
+
+
+
+        move();
+
+
+
+
     }
     private void FixedUpdate()
     {
 
-        move();
+        //move();
 
         
     }
 
     private void move()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector3(horizontal * Time.deltaTime * speed, rb.velocity.y, 0);
-        ar.SetBool("run", horizontal != 0);
-        if(OnWall() && !IsGrounded())
+        horizontal = Input.GetAxisRaw("Horizontal");
+        if (IsGrounded())
         {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            ar.SetBool("run", horizontal != 0);
+        }
+        else if(!IsGrounded() && !OnWall() && horizontal != 0)
+        {
+            Vector2 forceToAdd = new Vector2(ForceInAir * horizontal, 0);
+            rb.AddForce(forceToAdd);
+
+            if (Mathf.Abs(rb.velocity.x) > speed)
+            {
+                rb.velocity = new Vector2(speed * horizontal,rb.velocity.y);
+            }
+        }
+        else if(!IsGrounded() && !OnWall() && horizontal == 0)
+        {
+            rb.velocity = new Vector2 (rb.velocity.x * airDragMultiplier,rb.velocity.y);
+        }
+     
+
+
+        if (OnWall() && !IsGrounded() && rb.velocity.y < 0)
+        {
+            extrajump = extrajumpValue;
             if (rb.velocity.y < -wallslidespeed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -wallslidespeed);
@@ -89,15 +105,68 @@ public class hareket : MonoBehaviour
         }
         else
         {
+            
             ar.SetBool("iswall", false);
+        }
+
+   
+        
+    }
+    private void Flip()
+    {
+        if (!OnWall() && rb.velocity.y <= 0)
+        {
+            if (horizontal > 0.01f)
+            {
+                transform.localScale = new Vector3(6, 6, 6);
+                PDirection = 1;
+            }
+            else if (horizontal < 0)
+            {
+                transform.localScale = new Vector3(-6, 6, 6);
+                PDirection = -1;
+            }
         }
     }
     private void Jump()
     {
-        ar.SetTrigger("jump");
-        //rb.AddForce(Vector3.up * jumpforce, ForceMode2D.Impulse);
-        rb.velocity = new Vector2(rb.velocity.x,jumpforce);
-        extrajump--;
+
+        if (IsGrounded())
+        {
+            extrajump = extrajumpValue;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && extrajump > 0)
+        {
+            ar.SetBool("iswall", false);
+            if (!OnWall())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpforce);
+                
+            }
+            else if (!IsGrounded() && OnWall() && horizontal != 0)
+            {
+                
+                Vector2 forceToAdd = new Vector2(wallJumpDirection.x * wallJumpForce * horizontal, wallJumpForce * wallJumpDirection.y);
+                rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+            }
+            else if (!IsGrounded() && OnWall() && horizontal == 0)
+            {
+                
+                Vector2 forceToAdd = new Vector2(wallHopDirection.x * wallHopForce * -PDirection, wallHopForce * wallHopDirection.y);
+                rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+            }
+
+            ar.SetTrigger("jump");
+           
+            extrajump--;
+
+
+        }
+        else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y * jumpheight);
+        }
+        
     }
     
     private bool IsGrounded()
@@ -111,5 +180,6 @@ public class hareket : MonoBehaviour
         return raycashit.collider != null;
     }
 
-    
+
+
 }
