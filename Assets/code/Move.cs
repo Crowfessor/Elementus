@@ -13,6 +13,7 @@ public class hareket : MonoBehaviour
     public LayerMask Walllayer;
 
     private int PDirection = 1;
+    private int Health = 100;
 
     public float horizontal;
     public float speed = 500;
@@ -27,6 +28,8 @@ public class hareket : MonoBehaviour
     public float wallHopForce;
     public float wallJumpForce;
 
+    public bool canMove;
+
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
    
@@ -37,8 +40,11 @@ public class hareket : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
-        
-        
+
+        ControlMove(true);
+
+
+
     }
 
 
@@ -61,6 +67,17 @@ public class hareket : MonoBehaviour
 
 
     }
+    public void ControlMove(bool can)
+    {
+        if (can)
+        {
+            canMove = true;
+        }
+        else
+        {
+            canMove = false;
+        }
+    }
     private void FixedUpdate()
     {
 
@@ -72,7 +89,7 @@ public class hareket : MonoBehaviour
     private void move()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (IsGrounded())
+        if (IsGrounded() && canMove)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
             ar.SetBool("run", horizontal != 0);
@@ -146,7 +163,7 @@ public class hareket : MonoBehaviour
             else if (!IsGrounded() && OnWall() && horizontal != 0)
             {
                 
-                Vector2 forceToAdd = new Vector2(wallJumpDirection.x * wallJumpForce * horizontal, wallJumpForce * wallJumpDirection.y);
+                Vector2 forceToAdd = new Vector2(wallJumpDirection.x * wallJumpForce * -PDirection, wallJumpForce * wallJumpDirection.y);
                 rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             }
             else if (!IsGrounded() && OnWall() && horizontal == 0)
@@ -169,17 +186,20 @@ public class hareket : MonoBehaviour
         
     }
     
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         RaycastHit2D raycashit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0, Vector2.down, 0.1f,IsGround);
         return raycashit.collider != null;
     }
-    private bool OnWall()
+    public bool OnWall()
     {
         RaycastHit2D raycashit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0,new Vector2(transform.localScale.x,0), 0.1f, Walllayer);
         return raycashit.collider != null;
     }
-
+    public void Healthchange(int HealthchangeValue)
+    {
+        Health += HealthchangeValue; 
+    }
 
 
 }
