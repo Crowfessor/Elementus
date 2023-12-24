@@ -78,7 +78,7 @@ public class SPELL : MonoBehaviour
     }
     public void FireBall()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && ph.canMove)
         {
             rb.velocity = Vector2.zero;
             ph.ControlMove(false);
@@ -105,7 +105,7 @@ public class SPELL : MonoBehaviour
     public void StoneWall()
     {
         
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && ph.canMove)
         {
             
             rb.velocity = Vector2.zero;
