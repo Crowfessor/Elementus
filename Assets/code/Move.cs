@@ -27,12 +27,16 @@ public class hareket : MonoBehaviour
     public float airDragMultiplier;
     public float wallHopForce;
     public float wallJumpForce;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
     public float turnTimer;
     public float turnTimerSet;
    
 
-
+=======
+>>>>>>> parent of 304cec2 (bug fix down animation)
+=======
+>>>>>>> parent of 304cec2 (bug fix down animation)
 
     public bool canMove;
 
