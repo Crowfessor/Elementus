@@ -28204,7 +28204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2903042681050667068, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: IsGround.m_Bits
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2903042681050667068, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: Walllayer.m_Bits
