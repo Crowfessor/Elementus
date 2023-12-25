@@ -30,7 +30,7 @@ public class hareket : MonoBehaviour
     public float wallJumpForce;
     public float turnTimer;
     public float turnTimerSet;
-    public float a;
+   
 
 
     public bool canMove;

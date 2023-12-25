@@ -8,7 +8,7 @@ public class SPELL : MonoBehaviour
     public GameObject Fireball;
     public GameObject Player;
     public Transform rangeattack;
-<<<<<<< Updated upstream
+
 
     Rigidbody2D rb;
     Animator ar;
@@ -16,8 +16,6 @@ public class SPELL : MonoBehaviour
 
     public float timer;
     public float timerSet;
-
-
     public int CurrentPower = 0;
     void Start()
     {
@@ -26,14 +24,9 @@ public class SPELL : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         timerSet = 1;
-=======
-    Animator ar;
-    public int CurrentPower = 0;
-    void Start()
-    {
-        ar = GetComponent<Animator>(); 
->>>>>>> Stashed changes
+
     }
+  
 
     // Update is called once per frame
     void Update()
@@ -88,12 +81,12 @@ public class SPELL : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && ph.canMove)
         {
-<<<<<<< Updated upstream
+
             rb.velocity = Vector2.zero;
             ph.ControlMove(false);
             ar.SetTrigger("FireAttack");
         
-=======
+
            ar.SetTrigger("FireAttack");
            GameObject fire =  Instantiate(Fireball, rangeattack.position, Fireball.transform.rotation);
            Vector3 origscale = fire.transform.localScale;
@@ -103,7 +96,7 @@ public class SPELL : MonoBehaviour
                 origscale.y,
                 origscale.z
                 );
->>>>>>> Stashed changes
+
         }
 
 
