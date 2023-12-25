@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -69,19 +69,6 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -127,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 52
-        y: 412
-        width: 375
-        height: 95
+        y: 423
+        width: 383
+        height: 84
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd885f924c5deb549b4ee709840e3099
-      internalID: 1684470822
+      spriteID: 1705f6bae6358bc4d84f9f3b32fd76ba
+      internalID: 331652817
       vertices: []
       indices: 
       edges: []
@@ -147,10 +134,10 @@ TextureImporter:
       name: era-soren-side-dungeon-preview1_1
       rect:
         serializedVersion: 2
-        x: 1525
-        y: 575
-        width: 72
-        height: 249
+        x: 1115
+        y: 186
+        width: 368
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15d8cc4e03e2c1048b40f7bcd328ef6d
-      internalID: 636004224
+      spriteID: c8e52a1b8e9cf2d4bad42df322a57183
+      internalID: 1378617377
       vertices: []
       indices: 
       edges: []
@@ -168,19 +155,19 @@ TextureImporter:
       name: era-soren-side-dungeon-preview1_2
       rect:
         serializedVersion: 2
-        x: 628
-        y: 765
-        width: 443
-        height: 88
+        x: 1330
+        y: 395
+        width: 130
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef6ee07f9bbf13e49b842dcc0780a110
-      internalID: -1871352430
+      spriteID: 135490c5f7eef1749aa8820018acb102
+      internalID: -1686892906
       vertices: []
       indices: 
       edges: []
@@ -189,19 +176,19 @@ TextureImporter:
       name: era-soren-side-dungeon-preview1_3
       rect:
         serializedVersion: 2
-        x: 1740
-        y: 722
-        width: 97
-        height: 109
+        x: 1462
+        y: 396
+        width: 188
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdbcdef1b5cc8844c9db7423e5d27b3a
-      internalID: -1236561419
+      spriteID: bc944dd8593708542a3a99312cac6caa
+      internalID: 1484014770
       vertices: []
       indices: 
       edges: []
@@ -210,19 +197,19 @@ TextureImporter:
       name: era-soren-side-dungeon-preview1_4
       rect:
         serializedVersion: 2
-        x: 1076
-        y: 147
-        width: 172
-        height: 107
+        x: 541
+        y: 186
+        width: 86
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d0baa3b06ee94f4aa7fa509b129ae76
-      internalID: 1734191869
+      spriteID: 66fc238c62e89b74bbd79ad73fcf2243
+      internalID: 1841319364
       vertices: []
       indices: 
       edges: []
@@ -231,19 +218,145 @@ TextureImporter:
       name: era-soren-side-dungeon-preview1_5
       rect:
         serializedVersion: 2
-        x: 1269
-        y: 139
-        width: 138
-        height: 111
+        x: 1589
+        y: 1020
+        width: 111
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd7ea0dc3a06e4344b4669a7fb1ab9e8
-      internalID: 1989072523
+      spriteID: 00d8acc26cda65e4d9361dd654b03071
+      internalID: -1220797262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_chandelier
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 258
+        width: 414
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25091f811fec95f428f9868f88bad8e3
+      internalID: 632927345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_7
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1020
+        width: 220
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c12f74dabfe11e468273d423aab5cbe
+      internalID: 827866131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_8
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 896
+        width: 259
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d65995d0ec8c0f47a6305b2ffc8f82b
+      internalID: -649635416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: background_light
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 734
+        width: 107
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709aa15aa0a607c4abeb689f6d2822c9
+      internalID: 466129709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_10
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 576
+        width: 63
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6d27a7e31e40c449b14418edc2711f
+      internalID: 1753333576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_11
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 698
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5f1b60f47571b42bfc8fdd1f2070ba
+      internalID: -652822384
       vertices: []
       indices: 
       edges: []
@@ -252,41 +365,149 @@ TextureImporter:
       name: era-soren-side-dungeon-preview1_6
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 117
-        width: 95
-        height: 135
+        x: 1075
+        y: 163
+        width: 40
+        height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9340a3e75472fa449bc8d384727fe76e
-      internalID: -1990339102
+      spriteID: f823ea83df0955844a54f89307885b1f
+      internalID: 1944754154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_9
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 133
+        width: 40
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d522d477e8e6d2439d406135504b18c
+      internalID: -1724645504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_12
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 69
+        width: 81
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8.5, y: 32}
+        - {x: -40.5, y: 32}
+        - {x: -40.5, y: -32}
+        - {x: 40.5, y: -32}
+        - {x: 40.5, y: 12}
+        - {x: -8.5, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c417ff0cbb481d40aa0802cff721da1
+      internalID: -3699636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_13
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 69
+        width: 228
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53023e31977f3194c9200221cec5180e
+      internalID: -1661368760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: era-soren-side-dungeon-preview1_14
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 59
+        width: 102
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100503816c032cf40beca0a86d201116
+      internalID: 1556458661
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    physicsShape: []
+    physicsShape:
+    - - {x: -910, y: -104}
+      - {x: -910, y: -32}
+      - {x: -526, y: -32}
+      - {x: -526, y: -104}
+    - - {x: -418, y: -361}
+      - {x: -418, y: -289}
+      - {x: -333, y: -289}
+      - {x: -333, y: -361}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      era-soren-side-dungeon-preview1_0: 1684470822
-      era-soren-side-dungeon-preview1_1: 636004224
-      era-soren-side-dungeon-preview1_2: -1871352430
-      era-soren-side-dungeon-preview1_3: -1236561419
-      era-soren-side-dungeon-preview1_4: 1734191869
-      era-soren-side-dungeon-preview1_5: 1989072523
-      era-soren-side-dungeon-preview1_6: -1990339102
+      background_chandelier: 632927345
+      background_light: 466129709
+      era-soren-side-dungeon-preview1_0: 331652817
+      era-soren-side-dungeon-preview1_1: 1378617377
+      era-soren-side-dungeon-preview1_10: 1753333576
+      era-soren-side-dungeon-preview1_11: -652822384
+      era-soren-side-dungeon-preview1_12: -3699636
+      era-soren-side-dungeon-preview1_13: -1661368760
+      era-soren-side-dungeon-preview1_14: 1556458661
+      era-soren-side-dungeon-preview1_2: -1686892906
+      era-soren-side-dungeon-preview1_3: 1484014770
+      era-soren-side-dungeon-preview1_4: 1841319364
+      era-soren-side-dungeon-preview1_5: -1220797262
+      era-soren-side-dungeon-preview1_6: 1944754154
+      era-soren-side-dungeon-preview1_7: 827866131
+      era-soren-side-dungeon-preview1_8: -649635416
+      era-soren-side-dungeon-preview1_9: -1724645504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
