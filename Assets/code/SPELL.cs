@@ -8,6 +8,10 @@ public class SPELL : MonoBehaviour
     public GameObject Fireball;
     public GameObject Player;
     public Transform rangeattack;
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 8a2ee78 (a)
 
     Rigidbody2D rb;
     Animator ar;
@@ -25,6 +29,16 @@ public class SPELL : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         timerSet = 1;
+<<<<<<< HEAD
+=======
+=======
+    Animator ar;
+    public int CurrentPower = 0;
+    void Start()
+    {
+        ar = GetComponent<Animator>(); 
+>>>>>>> Stashed changes
+>>>>>>> parent of 8a2ee78 (a)
     }
 
     // Update is called once per frame
@@ -80,10 +94,28 @@ public class SPELL : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && ph.canMove)
         {
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 8a2ee78 (a)
             rb.velocity = Vector2.zero;
             ph.ControlMove(false);
             ar.SetTrigger("FireAttack");
         
+<<<<<<< HEAD
+=======
+=======
+           ar.SetTrigger("FireAttack");
+           GameObject fire =  Instantiate(Fireball, rangeattack.position, Fireball.transform.rotation);
+           Vector3 origscale = fire.transform.localScale;
+
+            fire.transform.localScale = new Vector3 (
+                origscale.x * transform.localScale.x > 0 ? 10 : -10,
+                origscale.y,
+                origscale.z
+                );
+>>>>>>> Stashed changes
+>>>>>>> parent of 8a2ee78 (a)
         }
 
 
