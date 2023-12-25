@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -27,15 +28,14 @@ public class hareket : MonoBehaviour
     public float airDragMultiplier;
     public float wallHopForce;
     public float wallJumpForce;
-<<<<<<< HEAD
     public float turnTimer;
     public float turnTimerSet;
    
 
-=======
->>>>>>> parent of 304cec2 (bug fix down animation)
 
     public bool canMove;
+    public bool canFlip;
+
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
@@ -49,6 +49,7 @@ public class hareket : MonoBehaviour
         wallJumpDirection.Normalize();
 
         ControlMove(true);
+        canFlip = true;
 
 
 
@@ -57,15 +58,42 @@ public class hareket : MonoBehaviour
 
     void Update()
     {
-
-      
-        Jump();
-        Flip();
+        
        
 
-    
-        ar.SetBool("Grounded", IsGrounded());
 
+        if (horizontal != 0 && OnWall())
+        {
+            if (!IsGrounded() && horizontal != PDirection)
+            {
+                
+                canFlip = false;
+
+                turnTimer = turnTimerSet;
+            }
+        }
+
+        if (!canFlip && !OnWall())
+        {
+            turnTimer -= Time.deltaTime;
+
+            if (turnTimer <= 0)
+            {
+               
+                canFlip = true;
+            }
+        }
+
+
+        Jump();
+        Flip();
+      
+
+
+
+
+        ar.SetBool("Grounded", IsGrounded());
+      
 
 
         move();
@@ -74,6 +102,7 @@ public class hareket : MonoBehaviour
 
 
     }
+ 
     public void ControlMove(bool can)
     {
         if (can)
@@ -87,7 +116,11 @@ public class hareket : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
+        if(!IsGrounded())
+        {
+            ar.SetFloat("Jump", rb.velocity.y);
+        }
+        
         //move();
 
         
@@ -138,7 +171,7 @@ public class hareket : MonoBehaviour
     }
     private void Flip()
     {
-        if (!OnWall() && rb.velocity.y <= 0)
+        if (!OnWall() && canFlip)
         {
             if (horizontal > 0.01f)
             {
@@ -172,6 +205,7 @@ public class hareket : MonoBehaviour
                 
                 Vector2 forceToAdd = new Vector2(wallJumpDirection.x * wallJumpForce * -PDirection, wallJumpForce * wallJumpDirection.y);
                 rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+               
             }
             else if (!IsGrounded() && OnWall() && horizontal == 0)
             {
@@ -180,7 +214,7 @@ public class hareket : MonoBehaviour
                 rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             }
 
-            ar.SetTrigger("jump");
+            
            
             extrajump--;
 
