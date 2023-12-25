@@ -145,7 +145,6 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 --- !u!1102 &-2866198430946450212
 AnimatorState:
@@ -158,15 +157,10 @@ AnimatorStateTransition:
 --- !u!1101 &-2997823838600731382
 AnimatorStateTransition:
 >>>>>>> parent of 304cec2 (bug fix down animation)
-=======
---- !u!1101 &-2997823838600731382
-AnimatorStateTransition:
->>>>>>> parent of 304cec2 (bug fix down animation)
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
   m_Name: Blend Tree
@@ -193,8 +187,6 @@ AnimatorStateTransition:
 =======
 =======
 >>>>>>> parent of 304cec2 (bug fix down animation)
-=======
->>>>>>> parent of 304cec2 (bug fix down animation)
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
@@ -207,11 +199,7 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
 <<<<<<< HEAD
-<<<<<<< HEAD
   m_TransitionDuration: 0.25
-=======
-  m_TransitionDuration: 0
->>>>>>> parent of 304cec2 (bug fix down animation)
 =======
   m_TransitionDuration: 0
 >>>>>>> parent of 304cec2 (bug fix down animation)
@@ -223,10 +211,7 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> Stashed changes
-=======
->>>>>>> parent of 304cec2 (bug fix down animation)
 =======
 >>>>>>> parent of 304cec2 (bug fix down animation)
 --- !u!1107 &-2381645557776261171
@@ -247,15 +232,11 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1187014625829936056}
 <<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_Position: {x: 590, y: 80, z: 0}
 =======
     m_Position: {x: 310, y: 210, z: 0}
 >>>>>>> Stashed changes
-=======
-    m_Position: {x: 630, y: 70, z: 0}
->>>>>>> parent of 304cec2 (bug fix down animation)
 =======
     m_Position: {x: 630, y: 70, z: 0}
 >>>>>>> parent of 304cec2 (bug fix down animation)
@@ -401,7 +382,6 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
   - m_Name: Jump
     m_Type: 1
     m_DefaultFloat: 0
@@ -411,8 +391,6 @@ AnimatorController:
     m_DefaultBool: 1
 >>>>>>> Stashed changes
     m_Controller: {fileID: 0}
-=======
->>>>>>> parent of 304cec2 (bug fix down animation)
 =======
 >>>>>>> parent of 304cec2 (bug fix down animation)
   m_AnimatorLayers:
