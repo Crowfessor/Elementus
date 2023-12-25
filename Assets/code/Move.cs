@@ -28,7 +28,12 @@ public class hareket : MonoBehaviour
     public float wallHopForce;
     public float wallJumpForce;
 
+    public float turnTimer;
+    public float turnTimerSet;
+
     public bool canMove;
+    public bool canFlip;
+
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
@@ -50,7 +55,10 @@ public class hareket : MonoBehaviour
 
     void Update()
     {
-
+        if (!IsGrounded())
+        {
+           ar.SetFloat("Jump",rb.velocity.y);
+        }
       
         Jump();
         Flip();
@@ -63,7 +71,27 @@ public class hareket : MonoBehaviour
 
         move();
 
+        if (Input.GetButtonDown("Horizontal") && OnWall())
+        {
+            if (!IsGrounded() && horizontal != 0)
+            {
+                
+                canFlip = false;
 
+                turnTimer = turnTimerSet;
+            }
+        }
+
+        if (!canFlip)
+        {
+            turnTimer -= Time.deltaTime;
+
+            if (turnTimer <= 0)
+            {
+                
+                canFlip = true;
+            }
+        }
 
 
     }
@@ -131,7 +159,7 @@ public class hareket : MonoBehaviour
     }
     private void Flip()
     {
-        if (!OnWall() && rb.velocity.y <= 0)
+        if (!OnWall() && canFlip)
         {
             if (horizontal > 0.01f)
             {

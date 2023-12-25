@@ -232,7 +232,7 @@ MonoBehaviour:
     m_Bits: 64
   Walllayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   horizontal: 0
   speed: 10
   jumpforce: 15
@@ -245,6 +245,7 @@ MonoBehaviour:
   airDragMultiplier: 0.95
   wallHopForce: 10
   wallJumpForce: 20
+  canMove: 0
   wallHopDirection: {x: 1, y: 0.5}
   wallJumpDirection: {x: 1, y: 2}
 --- !u!114 &2923902983148087116
@@ -262,6 +263,8 @@ MonoBehaviour:
   Fireball: {fileID: 1730182226681713876, guid: 769d75a058d89144aa73b9492857e4e7, type: 3}
   Player: {fileID: 0}
   rangeattack: {fileID: 4765430385283599938}
+  timer: 0
+  timerSet: 0
   CurrentPower: 0
 --- !u!1 &7601167912220537754
 GameObject:
