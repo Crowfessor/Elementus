@@ -1599,24 +1599,12 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2903042681050667068, guid: d7124301a9035454ab999053901a8e0b, type: 3}
-      propertyPath: turnTimer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903042681050667068, guid: d7124301a9035454ab999053901a8e0b, type: 3}
-      propertyPath: turnTimerSet
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903042681050667068, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: IsGround.m_Bits
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2903042681050667068, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: Walllayer.m_Bits
       value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 2923902983148087116, guid: d7124301a9035454ab999053901a8e0b, type: 3}
-      propertyPath: timerSet
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4268733935092489528, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: m_SortingLayer
