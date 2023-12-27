@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireScript : MonoBehaviour
 {
     public float FireSpeed;
+    public float destroyTime;
     Rigidbody2D rb;
     private void Awake()
     {
@@ -16,7 +17,7 @@ public class FireScript : MonoBehaviour
     }
     private void Update()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, destroyTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,6 +25,11 @@ public class FireScript : MonoBehaviour
             Destroy(gameObject);
 
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Stone")
+            Destroy(gameObject);
     }
 
 }

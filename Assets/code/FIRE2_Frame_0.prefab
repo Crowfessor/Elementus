@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireSpeed: 2
+  destroyTime: 5
 --- !u!95 &8249455781128852383
 Animator:
   serializedVersion: 5
