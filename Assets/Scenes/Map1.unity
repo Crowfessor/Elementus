@@ -6712,7 +6712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2330544430371624404, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.93
+      value: 6.955
       objectReference: {fileID: 0}
     - target: {fileID: 2330544430371624404, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6761,6 +6761,26 @@ PrefabInstance:
     - target: {fileID: 2903042681050667068, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: Walllayer.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3528430660497167592, guid: d7124301a9035454ab999053901a8e0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980158840674805922, guid: d7124301a9035454ab999053901a8e0b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.0967803
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980158840674805922, guid: d7124301a9035454ab999053901a8e0b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.28073692
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980158840674805922, guid: d7124301a9035454ab999053901a8e0b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0012203753
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980158840674805922, guid: d7124301a9035454ab999053901a8e0b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.21918488
       objectReference: {fileID: 0}
     - target: {fileID: 4268733935092489528, guid: d7124301a9035454ab999053901a8e0b, type: 3}
       propertyPath: m_SortingLayer
