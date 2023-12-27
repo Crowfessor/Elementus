@@ -6,7 +6,7 @@ using UnityEngine;
 public class SPELL : MonoBehaviour
 {
     public GameObject Fireball;
-    public GameObject Player;
+    public GameObject StoneWallSpawn;
     public Transform rangeattack;
 
     Rigidbody2D rb;
@@ -34,7 +34,7 @@ public class SPELL : MonoBehaviour
        
         if(!ph.OnWall() && ph.IsGrounded() )
         {
-            StoneWall();
+            StoneWallTriger();
             SpellSkill();
         }
 
@@ -102,7 +102,7 @@ public class SPELL : MonoBehaviour
     }
    
    
-    public void StoneWall()
+    public void StoneWallTriger()
     {
         
         if (Input.GetKeyDown(KeyCode.S) && ph.canMove)
@@ -115,5 +115,13 @@ public class SPELL : MonoBehaviour
           
         }
        
+    }
+    public void StoneWallOn()
+    {
+        StoneWallSpawn.SetActive(true);
+    }
+    public void StoneWallOf()
+    {
+        StoneWallSpawn.SetActive(false);
     }
 }
