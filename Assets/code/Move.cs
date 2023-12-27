@@ -59,6 +59,12 @@ public class hareket : MonoBehaviour
         {
            ar.SetFloat("Jump",rb.velocity.y);
         }
+        
+        else
+        {
+            ar.SetFloat("Jump",0);
+        }
+        
       
         Jump();
         Flip();

@@ -107,7 +107,7 @@ public class SPELL : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.S) && ph.canMove)
         {
-            
+            timer = 1.5f;
             rb.velocity = Vector2.zero;
             ph.ControlMove(false);
             ar.SetTrigger("StoneWall");

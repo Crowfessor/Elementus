@@ -8650,7 +8650,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1823145746}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -10916,6 +10916,11 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!20 &1823145746 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 271296340542212098, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+  m_PrefabInstance: {fileID: 227703010392107752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1925469316
 GameObject:
   m_ObjectHideFlags: 0
@@ -11210,11 +11215,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 271296340542212098, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
       propertyPath: orthographic size
-      value: 4.79
+      value: 7.18
       objectReference: {fileID: 0}
     - target: {fileID: 329887615915120130, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
       propertyPath: m_TagString
       value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 399744586357798374, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 399744586357798374, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 399744586357798374, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 399744586357798374, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11268,6 +11285,38 @@ PrefabInstance:
       propertyPath: StoneWallSpawn
       value: 
       objectReference: {fileID: 1397750661}
+    - target: {fileID: 4547907446985372891, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6395292
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547907446985372891, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Size.y
+      value: 0.745786
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547907446985372891, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Center.x
+      value: -0.31494474
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547907446985372891, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Center.y
+      value: -0.1581939
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266110573011653472, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6034703
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266110573011653472, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Size.y
+      value: 0.75735724
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266110573011653472, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.32261252
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266110573011653472, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.12132138
+      objectReference: {fileID: 0}
     - target: {fileID: 8639171866257604231, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
       propertyPath: m_Name
       value: Player 1
@@ -11275,6 +11324,22 @@ PrefabInstance:
     - target: {fileID: 8860983709134693332, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
       propertyPath: m_TagString
       value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150825036801113853, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4655
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150825036801113853, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.90000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150825036801113853, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7272
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150825036801113853, guid: b3235c37f8468b941b39bfe151b0f673, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00004339218
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
