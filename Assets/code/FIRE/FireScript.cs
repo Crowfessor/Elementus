@@ -6,10 +6,12 @@ public class FireScript : MonoBehaviour
 {
     public float FireSpeed;
     public float destroyTime;
+    Animator ar;
     Rigidbody2D rb;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        ar = GetComponent<Animator>();
     }
     void Start()
     {
@@ -21,15 +23,15 @@ public class FireScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Stone")
-            Destroy(gameObject);
+        if (collision.gameObject.tag != "Player")
+        {
+            ar.SetTrigger("Hit");
+            Destroy(gameObject,0.5f);
+            rb.velocity = new Vector2(transform.localScale.x * 0.3f, 0);
 
+        }
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Stone")
-            Destroy(gameObject);
+       
     }
 
 }

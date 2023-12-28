@@ -55,6 +55,7 @@ public class hareket : MonoBehaviour
 
     void Update()
     {
+        /*
         if (!IsGrounded())
         {
            ar.SetFloat("Jump",rb.velocity.y);
@@ -64,8 +65,9 @@ public class hareket : MonoBehaviour
         {
             ar.SetFloat("Jump",0);
         }
+        */
+        ar.SetFloat("Jump", rb.velocity.y);
         
-      
         Jump();
         Flip();
        
@@ -147,7 +149,7 @@ public class hareket : MonoBehaviour
 
         if (OnWall() && !IsGrounded() && rb.velocity.y < 0)
         {
-            extrajump = extrajumpValue;
+            extrajump = 1;
             if (rb.velocity.y < -wallslidespeed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -wallslidespeed);
@@ -213,11 +215,13 @@ public class hareket : MonoBehaviour
 
 
         }
-        else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0)
+        
+        else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0 && extrajump > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y * jumpheight);
+            extrajump--;
         }
-        
+       
     }
     
     public bool IsGrounded()
