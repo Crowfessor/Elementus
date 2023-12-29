@@ -31,6 +31,7 @@ public class ArrowAttack : MonoBehaviour
         else if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerHealth>().Healthchange(1);
+            Destroy(arrow, 0.1f);
         }
 
     }

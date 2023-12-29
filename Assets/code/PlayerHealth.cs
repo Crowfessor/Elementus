@@ -6,18 +6,23 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public Image HealtBar;
+    Animator anim;
 
     public float Health = 6;
     public int HalfCounter;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
    
     void Update()
     {
-        
+        if(Health <= 0)
+        {
+            anim.SetTrigger("Death");
+            gameObject.GetComponentInParent<hareket>().ControlMove(false);
+        }
     }
     public void Healthchange(float HealthchangeValue)
     {

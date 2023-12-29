@@ -22,7 +22,6 @@ public class hareket : MonoBehaviour
     public float horizontal;
     public float speed = 500;
     public float jumpforce = 5;
-    public float checkRadius = 0.27f;
     public float extrajump;
     public float extrajumpValue = 1;
     public float wallslidespeed;

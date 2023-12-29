@@ -8,6 +8,8 @@ TagManager:
   - Stone
   - Buz
   - FireBall
+  - Water
+  - FireWall
   layers:
   - Default
   - TransparentFX
