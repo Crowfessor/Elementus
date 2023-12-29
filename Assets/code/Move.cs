@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class hareket : MonoBehaviour
 {
@@ -10,13 +11,14 @@ public class hareket : MonoBehaviour
     Animator ar;
     BoxCollider2D bc;
     public Transform groundCheck;
+    public Image HealtBar;
 
     public LayerMask IsGround;
     public LayerMask Walllayer;
 
     private int PDirection = 1;
-    private int Health = 100;
 
+    public float Health = 100;
     public float horizontal;
     public float speed = 500;
     public float jumpforce = 5;
@@ -242,9 +244,13 @@ public class hareket : MonoBehaviour
         return raycashit.collider != null;
         
     }
-    public void Healthchange(int HealthchangeValue)
+    public void Healthchange(float HealthchangeValue)
     {
-        Health += HealthchangeValue; 
+        Health += HealthchangeValue;
+        HealthchangeValue /= 100;
+        HealtBar.fillAmount += HealthchangeValue;
+
+
     }
     private void OnDrawGizmos()
     {
