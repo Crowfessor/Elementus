@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class hareket : MonoBehaviour
     Rigidbody2D rb;
     Animator ar;
     BoxCollider2D bc;
+    public Transform groundCheck;
 
     public LayerMask IsGround;
     public LayerMask Walllayer;
@@ -27,6 +29,7 @@ public class hareket : MonoBehaviour
     public float airDragMultiplier;
     public float wallHopForce;
     public float wallJumpForce;
+    public float groundCheckRadius;
 
     public float turnTimer;
     public float turnTimerSet;
@@ -116,10 +119,10 @@ public class hareket : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
+        
         //move();
 
-        
+
     }
 
     private void move()
@@ -226,18 +229,27 @@ public class hareket : MonoBehaviour
     
     public bool IsGrounded()
     {
+        /*
         RaycastHit2D raycashit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0, Vector2.down, 0.1f,IsGround);
         return raycashit.collider != null;
+        */
+        return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, IsGround);
     }
     public bool OnWall()
     {
+        
         RaycastHit2D raycashit = Physics2D.BoxCast(bc.bounds.center, bc.bounds.size, 0,new Vector2(transform.localScale.x,0), 0.1f, Walllayer);
         return raycashit.collider != null;
+        
     }
     public void Healthchange(int HealthchangeValue)
     {
         Health += HealthchangeValue; 
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
 
-
+        
+    }
 }
