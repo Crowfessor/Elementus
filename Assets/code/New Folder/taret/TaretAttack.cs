@@ -24,7 +24,7 @@ public class TaretAttack : MonoBehaviour
 
     void Update()
     {
-        ÝsHere();
+        IsHere();
         if (isPlayer && Time.time >= AttackTime)
         {
          
@@ -40,7 +40,7 @@ public class TaretAttack : MonoBehaviour
         }
       
     }
-    public void ÝsHere()
+    public void IsHere()
     {
         RaycastHit2D hit = Physics2D.Raycast(AttackPoint.position, -transform.right, distance);
         if (hit.collider.gameObject.tag == "Player")
