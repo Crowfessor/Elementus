@@ -24,10 +24,13 @@ public class ArrowAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Stone")
-            Destroy(arrow);
+        {
+            rb.velocity = Vector2.zero;
+            Destroy(arrow,0.1f);
+        }
         else if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<hareket>().Healthchange(-10);
+            collision.gameObject.GetComponent<PlayerHealth>().Healthchange(1);
         }
 
     }

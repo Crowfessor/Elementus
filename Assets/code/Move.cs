@@ -11,14 +11,14 @@ public class hareket : MonoBehaviour
     Animator ar;
     BoxCollider2D bc;
     public Transform groundCheck;
-    public Image HealtBar;
+    
 
     public LayerMask IsGround;
     public LayerMask Walllayer;
 
     private int PDirection = 1;
 
-    public float Health = 100;
+    
     public float horizontal;
     public float speed = 500;
     public float jumpforce = 5;
@@ -60,17 +60,7 @@ public class hareket : MonoBehaviour
 
     void Update()
     {
-        /*
-        if (!IsGrounded())
-        {
-           ar.SetFloat("Jump",rb.velocity.y);
-        }
-        
-        else
-        {
-            ar.SetFloat("Jump",0);
-        }
-        */
+       
         ar.SetFloat("Jump", rb.velocity.y);
         
         Jump();
@@ -207,6 +197,7 @@ public class hareket : MonoBehaviour
                 Vector2 forceToAdd = new Vector2(wallJumpDirection.x * wallJumpForce * -PDirection, wallJumpForce * wallJumpDirection.y);
                 rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             }
+
             else if (!IsGrounded() && OnWall() && horizontal == 0)
             {
                 
@@ -244,14 +235,7 @@ public class hareket : MonoBehaviour
         return raycashit.collider != null;
         
     }
-    public void Healthchange(float HealthchangeValue)
-    {
-        Health += HealthchangeValue;
-        HealthchangeValue /= 100;
-        HealtBar.fillAmount += HealthchangeValue;
-
-
-    }
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
