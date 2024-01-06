@@ -6,6 +6,7 @@ using UnityEngine;
 public class SPELL : MonoBehaviour
 {
     public GameObject Fireball;
+    public GameObject Airball;
     public GameObject StoneWallSpawn;
     public Transform rangeattack;
 
@@ -70,7 +71,7 @@ public class SPELL : MonoBehaviour
                 break;
 
             case 1:
-                
+                AirAttack();
                 break;
 
 
@@ -88,6 +89,30 @@ public class SPELL : MonoBehaviour
 
 
     }
+
+
+    public void AirAttack()
+    {
+        if (Input.GetMouseButtonDown(0) && ph.canMove)
+        {
+            rb.velocity = Vector2.zero;
+            ph.ControlMove(false);
+           
+
+            GameObject Air = Instantiate(Airball, rangeattack.position + Vector3.up, Airball.transform.rotation);
+            Vector3 origscale = Air.transform.localScale;
+
+            Air.transform.localScale = new Vector3(
+                origscale.x * transform.localScale.x > 0 ? 1 : -1,
+                origscale.y,
+                origscale.z
+                );
+
+        }
+       
+
+    }
+
     public void FireAttack()
     {
         GameObject fire = Instantiate(Fireball, rangeattack.position, Fireball.transform.rotation);

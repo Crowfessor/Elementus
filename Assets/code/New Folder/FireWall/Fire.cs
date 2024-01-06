@@ -23,5 +23,10 @@ public class Fire : MonoBehaviour
             Instantiate(Gas, transform.position, Gas.transform.rotation);
             Destroy(gameObject,0.1f);
         }
+        else if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().Healthchange(2);
+            collision.gameObject.GetComponent<hareket>().KnockBack();
+        }
     }
 }

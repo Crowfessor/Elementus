@@ -31,6 +31,7 @@ public class hareket : MonoBehaviour
     public float wallHopForce;
     public float wallJumpForce;
     public float groundCheckRadius;
+   
 
     public float turnTimer;
     public float turnTimerSet;
@@ -38,7 +39,7 @@ public class hareket : MonoBehaviour
     public bool canMove;
     public bool canFlip;
 
-
+    public Vector2 knockBack;
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
    
@@ -59,6 +60,7 @@ public class hareket : MonoBehaviour
 
     void Update()
     {
+      
        
         ar.SetFloat("Jump", rb.velocity.y);
         
@@ -95,6 +97,10 @@ public class hareket : MonoBehaviour
             }
         }
 
+        if(!canMove)
+        {
+            ar.SetBool("run", false);
+        }
 
     }
     public void ControlMove(bool can)
@@ -159,6 +165,15 @@ public class hareket : MonoBehaviour
    
         
     }
+
+
+    public void KnockBack()
+    {
+        ControlMove(false);
+        rb.velocity =new Vector2(knockBack.x * -PDirection,rb.velocity.y + knockBack.y);
+    }
+
+
     private void Flip()
     {
         if (!OnWall() && canFlip)
@@ -203,6 +218,7 @@ public class hareket : MonoBehaviour
                 Vector2 forceToAdd = new Vector2(wallHopDirection.x * wallHopForce * -PDirection, wallHopForce * wallHopDirection.y);
                 rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             }
+        
 
             ar.SetTrigger("jump");
            
@@ -210,13 +226,14 @@ public class hareket : MonoBehaviour
 
 
         }
-        
         else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0 && extrajump > 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x,rb.velocity.y * jumpheight);
-            extrajump--;
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpheight);
+
         }
-       
+
+
+
     }
     
     public bool IsGrounded()
