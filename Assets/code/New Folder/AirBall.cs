@@ -7,10 +7,13 @@ public class AirBall : MonoBehaviour
     Rigidbody2D rb;
     public float AirSpeed;
     GameObject obje;
+    Animator ar;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        ar = GetComponent<Animator>();
+        
        
     }
     void Start()

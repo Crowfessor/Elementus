@@ -67,17 +67,17 @@ public class SPELL : MonoBehaviour
         switch (CurrentPower)
         {
             case 0:
-                FireBall();
+                Firemove();
                 break;
 
             case 1:
-                AirAttack();
+                Airmove();
                 break;
 
 
         }
     }
-    public void FireBall()
+    public void Firemove()
     {
         if (Input.GetMouseButtonDown(0) && ph.canMove)
         {
@@ -91,26 +91,30 @@ public class SPELL : MonoBehaviour
     }
 
 
-    public void AirAttack()
+    public void Airmove()
     {
         if (Input.GetMouseButtonDown(0) && ph.canMove)
         {
             rb.velocity = Vector2.zero;
             ph.ControlMove(false);
-           
+            ar.SetTrigger("AirAttack");
 
-            GameObject Air = Instantiate(Airball, rangeattack.position + Vector3.up, Airball.transform.rotation);
-            Vector3 origscale = Air.transform.localScale;
-
-            Air.transform.localScale = new Vector3(
-                origscale.x * transform.localScale.x > 0 ? 1 : -1,
-                origscale.y,
-                origscale.z
-                );
 
         }
        
 
+    }
+    public void AirAttack()
+    {
+
+        GameObject Air = Instantiate(Airball, rangeattack.position, Airball.transform.rotation);
+        Vector3 origscale = Air.transform.localScale;
+
+        Air.transform.localScale = new Vector3(
+            origscale.x * transform.localScale.x > 0 ? 5 : -5,
+            origscale.y,
+            origscale.z
+            );
     }
 
     public void FireAttack()
