@@ -32,6 +32,7 @@ public class AirBall : MonoBehaviour
         if (collision.gameObject.tag == "FireWall")
         {
             obje = collision.gameObject;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
             collision.gameObject.GetComponent<Transform>().localScale = new Vector3(15,15,15);
             StartCoroutine(Timer());
             
@@ -42,6 +43,6 @@ public class AirBall : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         obje.gameObject.GetComponent<Transform>().localScale = new Vector3(11, 11, 11);
-        Destroy(gameObject, 0.01f);
+        Destroy(gameObject);
     }
 }
