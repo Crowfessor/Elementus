@@ -61,6 +61,10 @@ public class SPELL : MonoBehaviour
         {
             CurrentPower = 1;
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            CurrentPower = 2;
+        }
     }
     public void SpellSkill()
     {
@@ -72,6 +76,10 @@ public class SPELL : MonoBehaviour
 
             case 1:
                 Airmove();
+                break;
+
+            case 2:
+                WaterAttack();
                 break;
 
 
@@ -104,6 +112,19 @@ public class SPELL : MonoBehaviour
         }
        
 
+    }
+
+    public void WaterAttack()
+    {
+        if (Input.GetMouseButtonDown(0) && ph.canMove)
+        {
+            timer = 1.5f;
+            rb.velocity = Vector2.zero;
+            ph.ControlMove(false);
+            ar.SetTrigger("WaterAttack");
+
+
+        }
     }
     public void AirAttack()
     {
