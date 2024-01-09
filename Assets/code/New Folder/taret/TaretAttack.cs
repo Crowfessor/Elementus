@@ -43,7 +43,11 @@ public class TaretAttack : MonoBehaviour
     public void IsHere()
     {
         RaycastHit2D hit = Physics2D.Raycast(AttackPoint.position, -transform.right, distance);
-        if (hit.collider.gameObject.tag == "Player")
+        if (hit == false)
+        {
+            isPlayer = false;
+        }
+        else if (hit.collider.gameObject.tag == "Player")
         {
             isPlayer = true;
         }
@@ -51,7 +55,7 @@ public class TaretAttack : MonoBehaviour
         {
             isPlayer = false;
         }
-       
+     
 
     }
     private void OnDrawGizmos()
