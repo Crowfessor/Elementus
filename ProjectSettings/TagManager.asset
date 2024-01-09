@@ -57,6 +57,9 @@ TagManager:
   - name: Character
     uniqueID: 3178884879
     locked: 0
+  - name: Door
+    uniqueID: 3024687101
+    locked: 0
   - name: Ground
     uniqueID: 3521987493
     locked: 0
