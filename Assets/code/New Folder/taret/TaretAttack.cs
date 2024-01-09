@@ -19,7 +19,7 @@ public class TaretAttack : MonoBehaviour
 
     void Start()
     {
-        
+       
     }
 
     void Update()
@@ -51,6 +51,7 @@ public class TaretAttack : MonoBehaviour
         {
             isPlayer = false;
         }
+       
 
     }
     private void OnDrawGizmos()

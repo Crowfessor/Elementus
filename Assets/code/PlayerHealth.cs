@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR;
 
 public class PlayerHealth : MonoBehaviour
 {
     public Image HealtBar;
     Animator anim;
+   
 
     public float Health = 6;
     public int HalfCounter;
     void Start()
     {
         anim = GetComponent<Animator>();
+      
     }
 
    
@@ -20,8 +23,12 @@ public class PlayerHealth : MonoBehaviour
     {
         if(Health <= 0)
         {
-            anim.SetTrigger("Death");
+            anim.SetBool("Death",true);
             gameObject.GetComponentInParent<hareket>().ControlMove(false);
+            gameObject.GetComponent<SPELL>().isdead(true);
+          
+            
+            
         }
     }
     public void Healthchange(float HealthchangeValue)

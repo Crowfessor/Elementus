@@ -203,6 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30befa1923dc06047916b303b237ca04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ArrowSpeed: 2
+  ArrowSpeed: 3
   destroyTime: 10
   arrow: {fileID: 1763330752487935273}

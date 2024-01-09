@@ -226,12 +226,13 @@ public class hareket : MonoBehaviour
 
 
         }
+        /*
         else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0 && extrajump > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpheight);
 
         }
-
+        */
 
 
     }
