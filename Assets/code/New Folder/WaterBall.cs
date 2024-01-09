@@ -16,7 +16,7 @@ public class WaterBall : MonoBehaviour
     
     void Update()
     {
-       Destroy(gameObject,10f);
+       Destroy(Water, 10f);
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
