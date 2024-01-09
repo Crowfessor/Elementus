@@ -17,6 +17,8 @@ public class SPELL : MonoBehaviour
     public float timer;
     public float timerSet;
 
+    public bool dead;
+
 
     public int CurrentPower = 0;
     void Start()
@@ -44,12 +46,23 @@ public class SPELL : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
-        if (timer <= 0)
+        if (timer <= 0 && !dead)
         {
             ph.ControlMove(true);
             timer = timerSet;
         }
 
+    }
+    public void isdead(bool d)
+    {
+        if (d == true)
+        {
+            dead = true;
+        }
+        else
+        {
+            dead = false;
+        }
     }
     public void KeyBinds()
     {
