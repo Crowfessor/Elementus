@@ -7,6 +7,7 @@ public class SPELL : MonoBehaviour
 {
     public GameObject Fireball;
     public GameObject Airball;
+    public GameObject Waterball;
     public GameObject StoneWallSpawn;
     public Transform rangeattack;
 
@@ -92,7 +93,7 @@ public class SPELL : MonoBehaviour
                 break;
 
             case 2:
-                WaterAttack();
+                Watermove();
                 break;
 
 
@@ -127,7 +128,7 @@ public class SPELL : MonoBehaviour
 
     }
 
-    public void WaterAttack()
+    public void Watermove()
     {
         if (Input.GetMouseButtonDown(0) && ph.canMove)
         {
@@ -139,6 +140,19 @@ public class SPELL : MonoBehaviour
 
         }
     }
+
+    public void WaterAttack()
+    {
+        GameObject Water = Instantiate(Waterball, rangeattack.position, Waterball.transform.rotation);
+        Vector3 origscale = Water.transform.localScale;
+
+        Water.transform.localScale = new Vector3(
+            origscale.x * transform.localScale.x > 0 ? 1 : -1,
+            origscale.y,
+            origscale.z
+            );
+    }
+
     public void AirAttack()
     {
 

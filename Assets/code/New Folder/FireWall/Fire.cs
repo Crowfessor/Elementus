@@ -28,5 +28,16 @@ public class Fire : MonoBehaviour
             collision.gameObject.GetComponent<PlayerHealth>().Healthchange(2);
             collision.gameObject.GetComponent<hareket>().KnockBack();
         }
+        else if (collision.gameObject.tag == "Waterball")
+        {
+            gameObject.transform.localScale = new Vector3(9, 9, 9);
+            StartCoroutine(Timer());
+        }
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameObject.transform.localScale = new Vector3(11, 11, 11);
+
     }
 }

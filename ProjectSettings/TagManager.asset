@@ -10,6 +10,7 @@ TagManager:
   - FireBall
   - Water
   - FireWall
+  - Waterball
   layers:
   - Default
   - TransparentFX

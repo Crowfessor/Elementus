@@ -193,10 +193,7 @@ public class hareket : MonoBehaviour
     private void Jump()
     {
 
-        if (IsGrounded())
-        {
-            extrajump = extrajumpValue;
-        }
+      
         if (Input.GetKeyDown(KeyCode.Space) && extrajump > 0)
         {
             ar.SetBool("iswall", false);
@@ -223,6 +220,13 @@ public class hareket : MonoBehaviour
             ar.SetTrigger("jump");
            
             extrajump--;
+
+
+        }
+        else if (IsGrounded())
+        {
+            extrajump = extrajumpValue;
+
 
 
         }
