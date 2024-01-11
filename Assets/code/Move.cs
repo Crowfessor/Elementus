@@ -35,6 +35,8 @@ public class hareket : MonoBehaviour
 
     public float turnTimer;
     public float turnTimerSet;
+    public float JumpTimer;
+    public float JumpTimerSet;
 
     public bool canMove;
     public bool canFlip;
@@ -74,12 +76,40 @@ public class hareket : MonoBehaviour
 
 
         move();
+        Canflip();
+        Canjump();
 
+
+
+    }
+    public void Canjump()
+    {
+        if (!IsGrounded() && !OnWall())
+        {
+            JumpTimer = JumpTimerSet;
+        }
+        else if (IsGrounded() && !OnWall())
+        {
+            
+            
+            JumpTimer -= Time.deltaTime;
+            
+            
+        }
+        
+        if (JumpTimer < 0)
+        {
+            extrajump = extrajumpValue;
+            JumpTimer = 0;
+        }
+    }
+    public void Canflip()
+    {
         if (Input.GetButtonDown("Horizontal") && OnWall())
         {
             if (!IsGrounded() && horizontal != 0)
             {
-                
+
                 canFlip = false;
 
                 turnTimer = turnTimerSet;
@@ -92,16 +122,15 @@ public class hareket : MonoBehaviour
 
             if (turnTimer <= 0)
             {
-                
+
                 canFlip = true;
             }
         }
 
-        if(!canMove)
+        if (!canMove)
         {
             ar.SetBool("run", false);
         }
-
     }
     public void ControlMove(bool can)
     {
@@ -192,10 +221,11 @@ public class hareket : MonoBehaviour
     }
     private void Jump()
     {
+        
 
-      
         if (Input.GetKeyDown(KeyCode.Space) && extrajump > 0)
         {
+            extrajump--;
             ar.SetBool("iswall", false);
             if (!OnWall())
             {
@@ -219,17 +249,12 @@ public class hareket : MonoBehaviour
 
             ar.SetTrigger("jump");
            
-            extrajump--;
+            
 
 
         }
-        else if (IsGrounded())
-        {
-            extrajump = extrajumpValue;
-
-
-
-        }
+       
+        
         /*
         else if (Input.GetKeyUp(KeyCode.Space) && rb.velocity.y > 0 && extrajump > 0)
         {

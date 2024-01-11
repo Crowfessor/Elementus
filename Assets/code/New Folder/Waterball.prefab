@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cca2b57514d234341afd2b34d26837e8, type: 2}
+  m_Sprite: {fileID: 21300000, guid: d17ce3c7782a38640bf428ba0a16a9a6, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waterspeed: 3
+  size: {x: 0, y: 0}
   Water: {fileID: 1778048905225504075}
 --- !u!50 &3306219062161099248
 Rigidbody2D:
