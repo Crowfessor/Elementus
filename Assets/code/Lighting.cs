@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Lighting : MonoBehaviour
 {
-   
+    public GameObject kapi;
     void Start()
     {
         
@@ -20,6 +21,9 @@ public class Lighting : MonoBehaviour
         if(collision.gameObject.tag == "Waterball")
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            kapi.GetComponent<Animator>().SetTrigger("kapiaç");
+            kapi.GetComponent<BoxCollider2D>().enabled = false;
+            
         }
     }
   
