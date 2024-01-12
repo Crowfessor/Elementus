@@ -14,6 +14,7 @@ public class SPELL : MonoBehaviour
     Rigidbody2D rb;
     Animator ar;
     hareket ph;
+    PlayerHealth phealt;
 
     public float timer;
     public float timerSet;
@@ -26,6 +27,7 @@ public class SPELL : MonoBehaviour
     {
         ar = GetComponent<Animator>();
         ph = GetComponent<hareket>();
+        phealt = GetComponent<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
 
         timerSet = 1;
@@ -79,6 +81,15 @@ public class SPELL : MonoBehaviour
         {
             CurrentPower = 2;
         }
+
+        if (phealt.Health > 0 && phealt.Health < 6)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                HealMe();
+            }
+        }
     }
     public void SpellSkill()
     {
@@ -98,6 +109,14 @@ public class SPELL : MonoBehaviour
 
 
         }
+    }
+
+    public void HealMe()
+    {
+        timer = 1.5f;
+        rb.velocity = Vector2.zero;
+        ph.ControlMove(false);
+        ar.SetTrigger("Heal");
     }
     public void Firemove()
     {
