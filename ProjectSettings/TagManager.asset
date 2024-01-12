@@ -12,6 +12,7 @@ TagManager:
   - FireWall
   - Waterball
   - Sea
+  - Airball
   layers:
   - Default
   - TransparentFX
