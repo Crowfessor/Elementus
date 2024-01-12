@@ -31,6 +31,7 @@ public class ArrowAttack : MonoBehaviour
         else if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerHealth>().Healthchange(1);
+            collision.gameObject.GetComponent<hareket>().KnockBack();
             Destroy(arrow, 0.1f);
         }
 
