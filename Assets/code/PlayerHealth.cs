@@ -40,25 +40,35 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Healthchange(float HealthchangeValue)
     {
-        if(HealthchangeValue > 0)
+        if (HealthchangeValue > 0 && (HealthchangeValue % 2 == 1 || HealthchangeValue == 1))
         {
-            Health -= HealthchangeValue;
-            if (Health % 2 == 0 && Health != 6)
-            {
-                HalfCounter = 2;
-            }
-            else
+
+            if (Health % 2 == 0)
             {
                 HalfCounter = 0;
             }
+            else
+            {
+                HalfCounter = 2;
+            }
+            Health -= HealthchangeValue;
 
             HealthchangeValue = (3.5f * HealthchangeValue + HalfCounter) / 25;
             HealtBar.fillAmount -= HealthchangeValue;
         }
+        else if (HealthchangeValue > 0 && HealthchangeValue % 2 == 0) {
+           
+            HalfCounter = 2;
+            Health -= HealthchangeValue;
+
+            HealthchangeValue = (3.5f * HealthchangeValue + HalfCounter) / 25;
+            HealtBar.fillAmount -= HealthchangeValue;
+        }
+
         else
         {
             Health -= HealthchangeValue;
-            if (Health % 2 == 0 )
+            if (Health % 2 == 0)
             {
                 HalfCounter = 0;
             }
