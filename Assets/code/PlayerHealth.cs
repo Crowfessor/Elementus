@@ -30,22 +30,47 @@ public class PlayerHealth : MonoBehaviour
             
             
         }
+        if(Health > 0 && Health < 6)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Healthchange(-1);
+            }
+        }
     }
     public void Healthchange(float HealthchangeValue)
     {
-        Health -= HealthchangeValue;
-        if(Health % 2 == 0 && Health !=6)
+        if(HealthchangeValue > 0)
         {
-            HalfCounter = 2;
+            Health -= HealthchangeValue;
+            if (Health % 2 == 0 && Health != 6)
+            {
+                HalfCounter = 2;
+            }
+            else
+            {
+                HalfCounter = 0;
+            }
+
+            HealthchangeValue = (3.5f * HealthchangeValue + HalfCounter) / 25;
+            HealtBar.fillAmount -= HealthchangeValue;
         }
         else
         {
-            HalfCounter = 0;
+            Health -= HealthchangeValue;
+            if (Health % 2 == 0 )
+            {
+                HalfCounter = 0;
+            }
+            else
+            {
+                HalfCounter = 2;
+            }
+
+            HealthchangeValue = (3.5f * HealthchangeValue - HalfCounter) / 25;
+            HealtBar.fillAmount -= HealthchangeValue;
         }
-     
-        HealthchangeValue = (3.5f * HealthchangeValue + HalfCounter) / 25;
-        HealtBar.fillAmount -= HealthchangeValue;
 
-
+        
     }
 }
