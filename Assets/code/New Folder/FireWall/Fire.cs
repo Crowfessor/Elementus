@@ -30,6 +30,11 @@ public class Fire : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Waterball")
         {
+            if (gameObject.transform.localScale.x < 6)
+            {
+                Instantiate(Gas, transform.position, Gas.transform.rotation);
+                Destroy(gameObject);
+            }
             gameObject.transform.localScale = new Vector3(9, 9, 9);
             StartCoroutine(Timer());
         }
