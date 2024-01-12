@@ -42,6 +42,15 @@ public class SPELL : MonoBehaviour
         {
             StoneWallTriger();
             SpellSkill();
+
+            if (phealt.Health > 0 && phealt.Health < 6 && ph.canMove)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+
+                    HealMe();
+                }
+            }
         }
 
         if (!ph.canMove)
@@ -82,14 +91,7 @@ public class SPELL : MonoBehaviour
             CurrentPower = 2;
         }
 
-        if (phealt.Health > 0 && phealt.Health < 6)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-
-                HealMe();
-            }
-        }
+        
     }
     public void SpellSkill()
     {
