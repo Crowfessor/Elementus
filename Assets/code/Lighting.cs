@@ -21,7 +21,7 @@ public class Lighting : MonoBehaviour
         if(collision.gameObject.tag == "Waterball")
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            kapi.GetComponent<Animator>().SetTrigger("kapiaç");
+            kapi.GetComponent<Animator>().SetTrigger("kapiac");
             kapi.GetComponent<BoxCollider2D>().enabled = false;
             
         }
