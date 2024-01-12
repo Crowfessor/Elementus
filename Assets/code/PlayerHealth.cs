@@ -30,14 +30,9 @@ public class PlayerHealth : MonoBehaviour
             
             
         }
-        if(Health > 0 && Health < 6)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Healthchange(-1);
-            }
-        }
+    
     }
+  
     public void Healthchange(float HealthchangeValue)
     {
         if (HealthchangeValue > 0 && (HealthchangeValue % 2 == 1 || HealthchangeValue == 1))
