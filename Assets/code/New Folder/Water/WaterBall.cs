@@ -35,7 +35,7 @@ public class WaterBall : MonoBehaviour
             size = collision.gameObject.GetComponent<SpriteRenderer>().size;
             if (size.y < 0.50f)
             {
-                collision.gameObject.GetComponent<SpriteRenderer>().size = new Vector2(size.x, size.y + 0.13f);
+                collision.gameObject.GetComponent<SpriteRenderer>().size = new Vector2(size.x, size.y + 0.2f);
             }
          
             Destroy(Water, 0.5f);
