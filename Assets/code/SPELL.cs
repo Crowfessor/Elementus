@@ -160,7 +160,7 @@ public class SPELL : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && ph.canMove)
         {
-            timer = 1.5f;
+            timer = 1.9f;
             rb.velocity = Vector2.zero;
             ph.ControlMove(false);
             ar.SetTrigger("WaterAttack");
