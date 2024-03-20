@@ -82,8 +82,8 @@ public class move1 : MonoBehaviour
         {
             ar.SetTrigger("WaterAttack");
             secim.SetActive(false);
-            speed = 100f;
+            
         }
-       
+        speed = 100f;
     }
 }
