@@ -22,7 +22,7 @@ public class SPELL : MonoBehaviour
     public bool dead;
 
 
-    public int CurrentPower = 0;
+    public int CurrentPower;
     void Start()
     {
         ar = GetComponent<Animator>();
@@ -30,6 +30,7 @@ public class SPELL : MonoBehaviour
         phealt = GetComponent<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
 
+        CurrentPower = 3;
         timerSet = 1;
     }
 
@@ -108,6 +109,12 @@ public class SPELL : MonoBehaviour
             case 2:
                 Watermove();
                 break;
+
+
+            case 3:
+                
+                break;
+
 
 
         }
