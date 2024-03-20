@@ -67,6 +67,7 @@ public class move1 : MonoBehaviour
     public void Secim(int i)
     {
         this.GetComponent<hareket>().canMove = false;
+        this.GetComponent<SPELL>().timer = 2f;
         if (i == 0)
         {
             ar.SetTrigger("FireAttack");
