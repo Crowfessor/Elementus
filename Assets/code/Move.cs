@@ -154,7 +154,7 @@ public class hareket : MonoBehaviour
     private void move()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if (IsGrounded() && canMove)
+        if (IsGrounded() && canMove && horizontal != 0)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
             ar.SetBool("run", horizontal != 0);

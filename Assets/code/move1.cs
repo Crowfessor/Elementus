@@ -46,7 +46,8 @@ public class move1 : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (this.GetComponent<hareket>().horizontal == 0)
+        
+        if (this.GetComponent<hareket>().horizontal == 0 && this.GetComponent<hareket>().canMove)
         {
             rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
         }
@@ -65,18 +66,23 @@ public class move1 : MonoBehaviour
 
     public void Secim(int i)
     {
+        this.GetComponent<hareket>().canMove = false;
         if (i == 0)
         {
             ar.SetTrigger("FireAttack");
-
+            secim.SetActive(false);
         }
         else if (i == 1)
         {
             ar.SetTrigger("AirAttack");
+            secim.SetActive(false);
         }
         else if (i == 2)
         {
             ar.SetTrigger("WaterAttack");
+            secim.SetActive(false);
+            speed = 100f;
         }
+       
     }
 }
