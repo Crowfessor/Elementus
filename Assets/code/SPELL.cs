@@ -10,6 +10,7 @@ public class SPELL : MonoBehaviour
     public GameObject Waterball;
     public GameObject StoneWallSpawn;
     public Transform rangeattack;
+    public GameObject Lighting;
 
     Rigidbody2D rb;
     Animator ar;
@@ -30,7 +31,7 @@ public class SPELL : MonoBehaviour
         phealt = GetComponent<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
 
-        CurrentPower = 3;
+        CurrentPower = 4;
         timerSet = 1;
     }
 
@@ -91,8 +92,12 @@ public class SPELL : MonoBehaviour
         {
             CurrentPower = 2;
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            CurrentPower = 3;
+        }
 
-        
+
     }
     public void SpellSkill()
     {
@@ -112,7 +117,11 @@ public class SPELL : MonoBehaviour
 
 
             case 3:
-                
+                Lightmove();
+                break;
+
+            case 4:
+               
                 break;
 
 
@@ -168,6 +177,18 @@ public class SPELL : MonoBehaviour
 
         }
     }
+    public void Lightmove()
+    {
+        if (Input.GetMouseButtonDown(0) && ph.canMove)
+        {
+            timer = 1.5f;
+            rb.velocity = Vector2.zero;
+            ph.ControlMove(false);
+            ar.SetTrigger("LightingAttack");
+
+
+        }
+    }
 
     public void WaterAttack()
     {
@@ -206,8 +227,20 @@ public class SPELL : MonoBehaviour
             );
        
     }
-   
-   
+    public void LightingAttack()
+    {
+        GameObject lighting = Instantiate(Lighting, rangeattack.position, Lighting.transform.rotation);
+        Vector3 origscale = lighting.transform.localScale;
+
+        lighting.transform.localScale = new Vector3(
+            origscale.x * transform.localScale.x > 0 ? 1 : -1,
+            origscale.y,
+            origscale.z
+            );
+
+    }
+
+
     public void StoneWallTriger()
     {
         

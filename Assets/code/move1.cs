@@ -12,6 +12,7 @@ public class move1 : MonoBehaviour
     public Button b1;
     public Button b2;
     public Button b3;
+    public Button b4;
 
     public GameObject canvas;
     public GameObject secim;
@@ -29,10 +30,12 @@ public class move1 : MonoBehaviour
         b1 = GameObject.FindWithTag("B1").GetComponent<Button>();
         b2 = GameObject.FindWithTag("B2").GetComponent<Button>();
         b3 = GameObject.FindWithTag("B3").GetComponent<Button>();
+        b4 = GameObject.FindWithTag("B4").GetComponent<Button>();
 
         b1.onClick.AddListener(delegate { Secim(0); });
         b2.onClick.AddListener(delegate { Secim(1); });
         b3.onClick.AddListener(delegate { Secim(2); });
+        b4.onClick.AddListener(delegate { Secim(3); });
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -83,6 +86,12 @@ public class move1 : MonoBehaviour
             ar.SetTrigger("WaterAttack");
             secim.SetActive(false);
             
+        }
+        else if (i == 3)
+        {
+            ar.SetTrigger("LightingAttack");
+            secim.SetActive(false);
+
         }
         speed = 100f;
     }
