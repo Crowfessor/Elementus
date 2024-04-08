@@ -66,7 +66,22 @@ public class move1 : MonoBehaviour
             secim.SetActive(true);
         }
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+      
+      if (collision.gameObject.tag == "Healball")
+        {
+            speed = 0f;
+            ar.SetTrigger("Heal");
+            Destroy(collision.gameObject);
+        }
+       
+     
+    }
+    public void speedreset()
+    {
+        speed = 100f;
+    }
     public void Secim(int i)
     {
         this.GetComponent<hareket>().canMove = false;
