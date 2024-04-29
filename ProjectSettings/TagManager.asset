@@ -21,6 +21,8 @@ TagManager:
   - durak
   - B4
   - Healball
+  - images
+  - donen
   layers:
   - Default
   - TransparentFX
