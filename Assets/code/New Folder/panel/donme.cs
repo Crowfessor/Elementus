@@ -5,9 +5,9 @@ using UnityEngine;
 public class donme : MonoBehaviour
 {
    
-    public Vector3 a;
-    public GameObject donen;
-    public int t;
+    Vector3 a;
+ 
+ 
     void Start()
     {
         
