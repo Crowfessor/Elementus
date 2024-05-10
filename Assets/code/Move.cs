@@ -199,6 +199,7 @@ public class hareket : MonoBehaviour
     public void KnockBack()
     {
         ControlMove(false);
+        rb.velocity = Vector2.zero;
         rb.velocity =new Vector2(knockBack.x * -PDirection,rb.velocity.y + knockBack.y);
     }
 

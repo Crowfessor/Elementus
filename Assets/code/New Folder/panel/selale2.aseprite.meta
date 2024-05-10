@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a755e12a76e25384fbd9f1f6b0fb18a4
+guid: 3ea61d81f5284f141b383c321fc8e3c5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638506046856262275
+  platformSettingsDirtyTick: 638507769343733730
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,9 +121,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: selale_Frame_0
+  - name: selale2_Frame_0
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 31
       height: 60
-    spriteID: 4dacc95d4c6417c48972b53ba88d1ecd
+    spriteID: 30fde2c4868f79c4ba13093babc66e76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,9 +141,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 84, y: 4}
-  - name: selale_Frame_1
+  - name: selale2_Frame_1
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 72
       width: 31
       height: 60
-    spriteID: a19b0392964332a43a93e6daa5763e10
+    spriteID: bfabf22b2c33e2c41bac37952d630ecb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,9 +161,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 84, y: 72}
-  - name: selale_Frame_2
+  - name: selale2_Frame_2
     originalName: 
-    pivot: {x: 0.4193548, y: -0.4754098}
+    pivot: {x: 0.4516129, y: -0.09836066}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 72
       width: 31
       height: 61
-    spriteID: 2d48cfa181eaae44e93cf388fb82b3dd
+    spriteID: 5d740f63f1dbb184293da46e0530c95a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,9 +181,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 72}
-  - name: selale_Frame_3
+  - name: selale2_Frame_3
     originalName: 
-    pivot: {x: 0.4193548, y: -0.4754098}
+    pivot: {x: 0.4516129, y: -0.09836066}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 141
       width: 31
       height: 61
-    spriteID: 5e9883d28ecd95a4eae02d519ce0cad6
+    spriteID: 110cc7db08ebec24baec799a6476b6fb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,9 +201,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 141}
-  - name: selale_Frame_4
+  - name: selale2_Frame_4
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 140
       width: 31
       height: 60
-    spriteID: 9d1787600f97777449e4403fa43d89f8
+    spriteID: 8d9643f5822a2f54d9523a8b4063a2ee
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,9 +221,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 84, y: 140}
-  - name: selale_Frame_5
+  - name: selale2_Frame_5
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 4
       width: 31
       height: 60
-    spriteID: efa323460ee005e4c88aed84f4b2859f
+    spriteID: c1ee788ae1049464f81a23648c03e640
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -241,9 +241,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 123, y: 4}
-  - name: selale_Frame_6
+  - name: selale2_Frame_6
     originalName: 
-    pivot: {x: 0.43750003, y: -0.4754098}
+    pivot: {x: 0.46875, y: -0.09836066}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 61
-    spriteID: 54f0369791ae2a64db447cb08007fe74
+    spriteID: e5ecb2f50739b664ab6fe701004ef6ea
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -261,9 +261,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: selale_Frame_7
+  - name: selale2_Frame_7
     originalName: 
-    pivot: {x: 0.43750003, y: -0.4754098}
+    pivot: {x: 0.46875, y: -0.09836066}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 73
       width: 32
       height: 61
-    spriteID: c026561e5a89f734493ae9ac7dd55826
+    spriteID: 22f07326ffdc9bd46823d17752fe8b36
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -281,9 +281,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 73}
-  - name: selale_Frame_8
+  - name: selale2_Frame_8
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 72
       width: 31
       height: 60
-    spriteID: f36e1f877aedf834d905f967b9df937e
+    spriteID: 9a7c5e7021f3d5345b2f6a863632b612
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -301,9 +301,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 123, y: 72}
-  - name: selale_Frame_9
+  - name: selale2_Frame_9
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 140
       width: 31
       height: 60
-    spriteID: 65f0d6e2aa3b53841b732e78c7377030
+    spriteID: 4b9baf0686858784eb60b3ae7be33328
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -321,9 +321,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 123, y: 140}
-  - name: selale_Frame_10
+  - name: selale2_Frame_10
     originalName: 
-    pivot: {x: 0.43750003, y: -0.5}
+    pivot: {x: 0.46875, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 142
       width: 32
       height: 60
-    spriteID: fefd33c90521a72429dd397e59d53e4a
+    spriteID: 5ac469f7c3c8d5e46804167123b38773
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -341,9 +341,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 142}
-  - name: selale_Frame_11
+  - name: selale2_Frame_11
     originalName: 
-    pivot: {x: 0.43750003, y: -0.5}
+    pivot: {x: 0.46875, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 4
       width: 32
       height: 60
-    spriteID: f2887d90214111a46bb106c9c27bfe96
+    spriteID: 593d945929a638149bed3193508b3bc5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -361,9 +361,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 44, y: 4}
-  - name: selale_Frame_12
+  - name: selale2_Frame_12
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 4
       width: 31
       height: 60
-    spriteID: fd4f607899ab05041802314fa2d210b1
+    spriteID: de8f54f5cbc6fcc4db5683fe945ab46d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -381,9 +381,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 162, y: 4}
-  - name: selale_Frame_13
+  - name: selale2_Frame_13
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 72
       width: 31
       height: 60
-    spriteID: 60b688fffbb657844a913cb3ca2eea9e
+    spriteID: c125e661be456c54ba4bca8cad397844
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -401,9 +401,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 162, y: 72}
-  - name: selale_Frame_14
+  - name: selale2_Frame_14
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -412,7 +412,7 @@ ScriptedImporter:
       y: 140
       width: 31
       height: 60
-    spriteID: 079d7a49bd259494086ced8f4ed44d98
+    spriteID: 3604bc3f0f9dcaf458b0aec867e3557e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -421,9 +421,9 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 162, y: 140}
-  - name: selale_Frame_15
+  - name: selale2_Frame_15
     originalName: 
-    pivot: {x: 0.4193548, y: -0.5}
+    pivot: {x: 0.4516129, y: -0.11666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -432,7 +432,7 @@ ScriptedImporter:
       y: 4
       width: 31
       height: 60
-    spriteID: 955253bb551c4fe42923e2750d9ecd8f
+    spriteID: f4e5a946fe56f7940b33383011eb178a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -444,140 +444,140 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1625454206
-    name: selale
+    guid: -965195016
+    name: selale2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: selale_Frame_0
+    - name: selale2_Frame_0
       frameIndex: 0
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: 4dacc95d4c6417c48972b53ba88d1ecd
-    - name: selale_Frame_1
+      spriteId: 30fde2c4868f79c4ba13093babc66e76
+    - name: selale2_Frame_1
       frameIndex: 1
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: a19b0392964332a43a93e6daa5763e10
-    - name: selale_Frame_2
+      spriteId: bfabf22b2c33e2c41bac37952d630ecb
+    - name: selale2_Frame_2
       frameIndex: 2
       cellRect:
-        x: 11
-        y: 29
+        x: 6
+        y: 6
         width: 31
         height: 61
-      spriteId: 2d48cfa181eaae44e93cf388fb82b3dd
-    - name: selale_Frame_3
+      spriteId: 5d740f63f1dbb184293da46e0530c95a
+    - name: selale2_Frame_3
       frameIndex: 3
       cellRect:
-        x: 11
-        y: 29
+        x: 6
+        y: 6
         width: 31
         height: 61
-      spriteId: 5e9883d28ecd95a4eae02d519ce0cad6
-    - name: selale_Frame_4
+      spriteId: 110cc7db08ebec24baec799a6476b6fb
+    - name: selale2_Frame_4
       frameIndex: 4
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: 9d1787600f97777449e4403fa43d89f8
-    - name: selale_Frame_5
+      spriteId: 8d9643f5822a2f54d9523a8b4063a2ee
+    - name: selale2_Frame_5
       frameIndex: 5
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: efa323460ee005e4c88aed84f4b2859f
-    - name: selale_Frame_6
+      spriteId: c1ee788ae1049464f81a23648c03e640
+    - name: selale2_Frame_6
       frameIndex: 6
       cellRect:
-        x: 10
-        y: 29
+        x: 5
+        y: 6
         width: 32
         height: 61
-      spriteId: 54f0369791ae2a64db447cb08007fe74
-    - name: selale_Frame_7
+      spriteId: e5ecb2f50739b664ab6fe701004ef6ea
+    - name: selale2_Frame_7
       frameIndex: 7
       cellRect:
-        x: 10
-        y: 29
+        x: 5
+        y: 6
         width: 32
         height: 61
-      spriteId: c026561e5a89f734493ae9ac7dd55826
-    - name: selale_Frame_8
+      spriteId: 22f07326ffdc9bd46823d17752fe8b36
+    - name: selale2_Frame_8
       frameIndex: 8
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: f36e1f877aedf834d905f967b9df937e
-    - name: selale_Frame_9
+      spriteId: 9a7c5e7021f3d5345b2f6a863632b612
+    - name: selale2_Frame_9
       frameIndex: 9
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: 65f0d6e2aa3b53841b732e78c7377030
-    - name: selale_Frame_10
+      spriteId: 4b9baf0686858784eb60b3ae7be33328
+    - name: selale2_Frame_10
       frameIndex: 10
       cellRect:
-        x: 10
-        y: 30
+        x: 5
+        y: 7
         width: 32
         height: 60
-      spriteId: fefd33c90521a72429dd397e59d53e4a
-    - name: selale_Frame_11
+      spriteId: 5ac469f7c3c8d5e46804167123b38773
+    - name: selale2_Frame_11
       frameIndex: 11
       cellRect:
-        x: 10
-        y: 30
+        x: 5
+        y: 7
         width: 32
         height: 60
-      spriteId: f2887d90214111a46bb106c9c27bfe96
-    - name: selale_Frame_12
+      spriteId: 593d945929a638149bed3193508b3bc5
+    - name: selale2_Frame_12
       frameIndex: 12
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: fd4f607899ab05041802314fa2d210b1
-    - name: selale_Frame_13
+      spriteId: de8f54f5cbc6fcc4db5683fe945ab46d
+    - name: selale2_Frame_13
       frameIndex: 13
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: 60b688fffbb657844a913cb3ca2eea9e
-    - name: selale_Frame_14
+      spriteId: c125e661be456c54ba4bca8cad397844
+    - name: selale2_Frame_14
       frameIndex: 14
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: 079d7a49bd259494086ced8f4ed44d98
-    - name: selale_Frame_15
+      spriteId: 3604bc3f0f9dcaf458b0aec867e3557e
+    - name: selale2_Frame_15
       frameIndex: 15
       cellRect:
-        x: 11
-        y: 30
+        x: 6
+        y: 7
         width: 31
         height: 60
-      spriteId: 955253bb551c4fe42923e2750d9ecd8f
+      spriteId: f4e5a946fe56f7940b33383011eb178a
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -608,4 +608,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 48, y: 100}
+  canvasSize: {x: 40, y: 73}
