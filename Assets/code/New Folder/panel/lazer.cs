@@ -7,7 +7,7 @@ using UnityEngine;
 public class lazer : MonoBehaviour
 {
     public float distance = 10f;
-    public int yansýmaSayýsý = 3;
+    public int yansýmaSayýsý;
     public RaycastHit2D hit;
     public LayerMask ayna;
   
@@ -18,8 +18,9 @@ public class lazer : MonoBehaviour
     void Start()
     {
         lr = GetComponent<LineRenderer>();
-        
-        
+        yansýmaSayýsý = 4;
+
+
     }
 
 

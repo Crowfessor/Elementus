@@ -38,6 +38,10 @@ public class AirBall : MonoBehaviour
             
             
         }
+        else if (collision.gameObject.tag == "durak")
+        {
+            Destroy(collision.gameObject);
+        }
     }
     IEnumerator Timer()
     {

@@ -26,6 +26,7 @@ public class minialev : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<hareket>().rb.velocity = Vector2.zero;
             collision.gameObject.GetComponent<PlayerHealth>().Healthchange(1);
             collision.gameObject.GetComponent<hareket>().KnockBack();
         }
@@ -39,14 +40,14 @@ public class minialev : MonoBehaviour
         else if (collision.gameObject.tag == "Airball")
         {
             Destroy(collision.gameObject);
-            gameObject.transform.localScale = new Vector3(6, 6, 6);
+            gameObject.transform.localScale = new Vector3(11, 11, 11);
             StartCoroutine(Timer());
         }
     }
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(0.5f);
-        gameObject.transform.localScale = new Vector3(4, 4, 4);
+        gameObject.transform.localScale = new Vector3(10, 10, 10);
 
     }
 }

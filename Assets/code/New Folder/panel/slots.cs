@@ -39,7 +39,19 @@ public class slots : MonoBehaviour,IDropHandler
                 }
                 eventData.pointerDrag.GetComponent<dragdrop>().istrue = false;
             }
-           
+            else if ((eventData.pointerDrag.name == "hava_s" || eventData.pointerDrag.name == "su_s (1)") && (this.name == "Image5" || this.name == "Image6"))
+            {
+                if (this.name == "Image5")
+                {
+                    dogru.i5 = 5;
+                }
+                else if (this.name == "Image6")
+                {
+                    dogru.i6 = 6;
+                }
+                eventData.pointerDrag.GetComponent<dragdrop>().istrue = false;
+            }
+
         }
         
         

@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf44031892824e4d8ff9e494eb53d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waterspeed: 3
+  Waterspeed: 5
   size: {x: 0, y: 0}
   Water: {fileID: 1778048905225504075}
 --- !u!50 &3306219062161099248

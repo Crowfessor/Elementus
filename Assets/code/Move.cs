@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class hareket : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     Animator ar;
     BoxCollider2D bc;
     public Transform groundCheck;
-    
+    move1 mv1;
 
     public LayerMask IsGround;
     public LayerMask Walllayer;
@@ -47,6 +47,7 @@ public class hareket : MonoBehaviour
    
     void Start()
     {
+        mv1 = GetComponent<move1>();
         rb = GetComponent<Rigidbody2D>();
         ar = GetComponent<Animator>();
         bc = GetComponent<BoxCollider2D>();
@@ -199,10 +200,18 @@ public class hareket : MonoBehaviour
     public void KnockBack()
     {
         ControlMove(false);
-        rb.velocity = Vector2.zero;
+        //rb.velocity = Vector2.zero;
         rb.velocity =new Vector2(knockBack.x * -PDirection,rb.velocity.y + knockBack.y);
+        //rb.AddForce(new Vector2(knockBack.x * -PDirection, rb.velocity.y + knockBack.y));
+        StartCoroutine(Timer());
+        
     }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        mv1.Duraktetik();
 
+    }
 
     private void Flip()
     {

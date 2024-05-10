@@ -20,7 +20,7 @@ public class move1 : MonoBehaviour
     public float speed;
     void Start()
     {
-        speed = 100f;
+        speed = 200f;
 
         ar = GetComponent<Animator>();
 
@@ -58,7 +58,7 @@ public class move1 : MonoBehaviour
         
     }
    
-    private void OnTriggerExit2D(Collider2D collision)
+   /* private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "durak")
         {
@@ -66,21 +66,39 @@ public class move1 : MonoBehaviour
             secim.SetActive(true);
         }
     }
+   */
+   public void Duraktetik()
+    {
+        speed = 0f;
+        secim.SetActive(true);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      
-      if (collision.gameObject.tag == "Healball")
+       
+
+        if (collision.gameObject.tag == "Healball")
         {
             speed = 0f;
             ar.SetTrigger("Heal");
             Destroy(collision.gameObject);
         }
-       
+      
      
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "durak")
+        {
+            Duraktetik();
+        }
+        else if (collision.gameObject.tag == "durak2")
+        {
+            speed = 0f;
+        }
     }
     public void speedreset()
     {
-        speed = 100f;
+        speed = 200f;
     }
     public void Secim(int i)
     {
@@ -108,6 +126,6 @@ public class move1 : MonoBehaviour
             secim.SetActive(false);
 
         }
-        speed = 100f;
+        speed = 200f;
     }
 }
