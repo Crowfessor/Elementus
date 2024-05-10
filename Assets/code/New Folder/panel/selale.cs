@@ -6,11 +6,13 @@ public class selale : MonoBehaviour
 {
     Animator ar;
     BoxCollider2D bc;
+    GameObject player;
  
     void Start()
     {
         ar = GetComponent<Animator>();
         bc = GetComponent<BoxCollider2D>();
+        player = GameObject.FindWithTag("Player");
     }
 
 
@@ -33,6 +35,7 @@ public class selale : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Airball")
         {
+            player.GetComponent<SPELL>().timer = 2.5f;
             Destroy(collision.gameObject);
             ar.SetTrigger("don");
             bc.enabled = false;
