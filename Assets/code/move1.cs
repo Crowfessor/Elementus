@@ -16,13 +16,22 @@ public class move1 : MonoBehaviour
 
     public GameObject canvas;
     public GameObject secim;
+    public GameObject puzzle1;
+    public GameObject puzzlesecim;
+
+
 
     public float speed;
+  
     void Start()
     {
-        speed = 200f;
 
+        speed = 200f;
+       
         ar = GetComponent<Animator>();
+
+        /*puzzle1 = GameObject.FindWithTag("puzzle1");
+        puzzlesecim = GameObject.FindWithTag("puzzlesecim");*/
 
         canvas = GameObject.FindWithTag("UI");
         secim = GameObject.FindWithTag("secim");
@@ -46,6 +55,8 @@ public class move1 : MonoBehaviour
     void Update()
     {
         ar.SetBool("run", speed != 0);
+
+      
     }
     private void FixedUpdate()
     {
@@ -70,6 +81,7 @@ public class move1 : MonoBehaviour
    public void Duraktetik()
     {
         speed = 0f;
+        
         secim.SetActive(true);
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -82,18 +94,44 @@ public class move1 : MonoBehaviour
             ar.SetTrigger("Heal");
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.tag == "durak3")
+        {
+            Duraktetik();
+            b1.gameObject.SetActive(false);
+            b2.gameObject.SetActive(false);
+            b3.gameObject.SetActive(false);
+            b4.gameObject.SetActive(false);
+            puzzle1.SetActive(true);
+            puzzlesecim.SetActive(true);
+            
+        }
       
      
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "durak")
+        if (this.GetComponent<hareket>().canMove)
         {
-            Duraktetik();
+            if (collision.gameObject.tag == "durak")
+            {
+                Duraktetik();
+            }
+            else if (collision.gameObject.tag == "durak2")
+            {
+                speed = 0f;
+            }
+            else if (collision.gameObject.tag == "durak12")
+            {
+                Duraktetik();
+            }
         }
-        else if (collision.gameObject.tag == "durak2")
+        
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "durak2")
         {
-            speed = 0f;
+            speed = 230f;
         }
     }
     public void speedreset()

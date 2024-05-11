@@ -31,17 +31,24 @@ public class selale : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Waterball")
         {
+            player.GetComponent<SPELL>().timer = 1.5f;
             Destroy(collision.gameObject);
             gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
             StartCoroutine(Timer());
         }
         else if (collision.gameObject.tag == "Airball")
         {
-            player.GetComponent<SPELL>().timer = 2.5f;
+            player.GetComponent<SPELL>().timer = 2.8f;
             Destroy(collision.gameObject);
             ar.SetTrigger("don");
             bc.enabled = false;
 
+        }
+        else if (collision.gameObject.tag == "FireBall")
+        {
+            player.GetComponent<SPELL>().timer = 1.5f;
+            gameObject.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+            StartCoroutine(Timer());
         }
     }
     IEnumerator Timer()

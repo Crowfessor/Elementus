@@ -23,12 +23,25 @@ public class FireScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "durak")
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "durak" && collision.gameObject.tag != "durak12")
         {
             ar.SetTrigger("Hit");
             Destroy(gameObject,0.5f);
             rb.velocity = new Vector2(transform.localScale.x * 0.3f, 0);
 
+        }
+        else if (collision.gameObject.tag == "durak12")
+        {
+            Destroy(collision.gameObject, 0.5f);
+           
+        }
+        
+        if (collision.gameObject.tag == "kapbuz")
+        {
+            ar.SetTrigger("Hit");
+            Destroy(gameObject, 0.5f);
+            Destroy(collision.gameObject, 0.5f);
+            rb.velocity = new Vector2(transform.localScale.x * 0.3f, 0);
         }
 
        

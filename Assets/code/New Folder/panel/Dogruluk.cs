@@ -11,8 +11,10 @@ public class Dogruluk : MonoBehaviour
     public List<GameObject> images;
    
     GameObject canvas;
+    GameObject player;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         canvas = GameObject.FindWithTag("secim");
         images.AddRange(GameObject.FindGameObjectsWithTag("images"));
         i = 0;
@@ -40,6 +42,8 @@ public class Dogruluk : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         canvas.SetActive(false);
+        player.GetComponent<move1>().speedreset();
+
 
 
     }

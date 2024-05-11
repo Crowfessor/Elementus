@@ -15,11 +15,12 @@ public class Water : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+  
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "FireWall")
+        if (collision.gameObject.tag == "Ground")
         {
-            Destroy(gameObject);
+            Destroy(gameObject,0.7f);
         }
     }
 }
